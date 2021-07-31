@@ -17,33 +17,37 @@ end
     if(not(pokemon))then
         return
     end
-
-    local poke_moves = slot:getAttribute(ITEM_ATTRIBUTE_POKEMOVES)
-    if(poke_moves)then
-        if(words == "move1")then
+    if(words == "move1")then
+            local pokemove1 = slot:getAttribute(ITEM_ATTRIBUTE_POKEMOVE1)
             return
         elseif(words == "move2")then
+            local pokemove1 = slot:getAttribute(ITEM_ATTRIBUTE_POKEMOVE2)
             return
         elseif(words == "move3")then
+            local pokemove1 = slot:getAttribute(ITEM_ATTRIBUTE_POKEMOVE3)
             return
         elseif(words == "move4")then
+            local pokemove1 = slot:getAttribute(ITEM_ATTRIBUTE_POKEMOVE4)
             return
         elseif(words == "move5")then
+            local pokemove1 = slot:getAttribute(ITEM_ATTRIBUTE_POKEMOVE5)
             return
         elseif(words == "move6")then
+            local pokemove1 = slot:getAttribute(ITEM_ATTRIBUTE_POKEMOVE6)
             return
         elseif(words == "move7")then
+            local pokemove1 = slot:getAttribute(ITEM_ATTRIBUTE_POKEMOVE7)
             return
         elseif(words == "move8")then
+            local pokemove1 = slot:getAttribute(ITEM_ATTRIBUTE_POKEMOVE8)
             return
         elseif(words == "move9")then
+            local pokemove1 = slot:getAttribute(ITEM_ATTRIBUTE_POKEMOVE9)
             return
         elseif(words == "move10")then
+            local pokemove1 = slot:getAttribute(ITEM_ATTRIBUTE_POKEMOVE10)
             return
         else
             return true
         end
-
-    end
-    
 end

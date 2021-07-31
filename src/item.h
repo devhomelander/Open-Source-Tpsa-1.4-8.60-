@@ -281,11 +281,65 @@ class ItemAttributes
 			return static_cast<uint16_t>(getIntAttr(ITEM_ATTRIBUTE_POKEADDON));
 		}
 
-		void setPokeMoves(uint16_t valueMoves) {
-			setIntAttr(ITEM_ATTRIBUTE_POKEMOVES, valueMoves);
+		void setPokeMoves1(const std::string& _valueMoves1) {
+			setStrAttr(ITEM_ATTRIBUTE_POKEMOVE1, _valueMoves1);
 		}
-		uint16_t getPokeMoves() const {
-			return static_cast<uint16_t>(getIntAttr(ITEM_ATTRIBUTE_POKEMOVES));
+		const std::string& getPokeMoves1() const {
+			return getStrAttr(ITEM_ATTRIBUTE_POKEMOVE1);
+		}
+		void setPokeMoves2(const std::string& _valueMoves2) {
+			setStrAttr(ITEM_ATTRIBUTE_POKEMOVE2, _valueMoves2);
+		}
+		const std::string& getPokeMoves2() const {
+			return getStrAttr(ITEM_ATTRIBUTE_POKEMOVE2);
+		}
+		void setPokeMoves3(const std::string& _valueMoves3) {
+			setStrAttr(ITEM_ATTRIBUTE_POKEMOVE3, _valueMoves3);
+		}
+		const std::string& getPokeMoves3() const {
+			return getStrAttr(ITEM_ATTRIBUTE_POKEMOVE3);
+		}
+		void setPokeMoves4(const std::string& _valueMoves4) {
+			setStrAttr(ITEM_ATTRIBUTE_POKEMOVE4, _valueMoves4);
+		}
+		const std::string& getPokeMoves4() const {
+			return getStrAttr(ITEM_ATTRIBUTE_POKEMOVE4);
+		}
+		void setPokeMoves5(const std::string& _valueMoves5) {
+			setStrAttr(ITEM_ATTRIBUTE_POKEMOVE5, _valueMoves5);
+		}
+		const std::string& getPokeMoves5() const {
+			return getStrAttr(ITEM_ATTRIBUTE_POKEMOVE5);
+		}
+		void setPokeMoves6(const std::string& _valueMoves6) {
+			setStrAttr(ITEM_ATTRIBUTE_POKEMOVE6, _valueMoves6);
+		}
+		const std::string& getPokeMoves6() const {
+			return getStrAttr(ITEM_ATTRIBUTE_POKEMOVE6);
+		}
+		void setPokeMoves7(const std::string& _valueMoves7) {
+			setStrAttr(ITEM_ATTRIBUTE_POKEMOVE7, _valueMoves7);
+		}
+		const std::string& getPokeMoves7() const {
+			return getStrAttr(ITEM_ATTRIBUTE_POKEMOVE7);
+		}
+		void setPokeMoves8(const std::string& _valueMoves8) {
+			setStrAttr(ITEM_ATTRIBUTE_POKEMOVE8, _valueMoves8);
+		}
+		const std::string& getPokeMoves8() const {
+			return getStrAttr(ITEM_ATTRIBUTE_POKEMOVE8);
+		}
+		void setPokeMoves9(const std::string& _valueMoves9) {
+			setStrAttr(ITEM_ATTRIBUTE_POKEMOVE9, _valueMoves9);
+		}
+		const std::string& getPokeMoves9() const {
+			return getStrAttr(ITEM_ATTRIBUTE_POKEMOVE9);
+		}
+		void setPokeMoves10(const std::string& _valueMoves10) {
+			setStrAttr(ITEM_ATTRIBUTE_POKEMOVE10, _valueMoves10);
+		}
+		const std::string& getPokeMoves10() const {
+			return getStrAttr(ITEM_ATTRIBUTE_POKEMOVE10);
 		}
 		struct CustomAttribute
 		{
@@ -576,7 +630,9 @@ class ItemAttributes
 			| ITEM_ATTRIBUTE_DURATION | ITEM_ATTRIBUTE_DECAYSTATE | ITEM_ATTRIBUTE_CORPSEOWNER | ITEM_ATTRIBUTE_CHARGES
 			| ITEM_ATTRIBUTE_FLUIDTYPE | ITEM_ATTRIBUTE_DOORID | ITEM_ATTRIBUTE_DECAYTO | ITEM_ATTRIBUTE_GENDER
 			| ITEM_ATTRIBUTE_POKETRANSFORM | ITEM_ATTRIBUTE_POKELIFE | ITEM_ATTRIBUTE_POKENATURE | ITEM_ATTRIBUTE_POKELEVEL
-			| ITEM_ATTRIBUTE_POKEADDON | ITEM_ATTRIBUTE_POKEMOVES;
+			| ITEM_ATTRIBUTE_POKEADDON | ITEM_ATTRIBUTE_POKEMOVE1 | ITEM_ATTRIBUTE_POKEMOVE2 | ITEM_ATTRIBUTE_POKEMOVE3
+			| ITEM_ATTRIBUTE_POKEMOVE4 | ITEM_ATTRIBUTE_POKEMOVE5 | ITEM_ATTRIBUTE_POKEMOVE6 | ITEM_ATTRIBUTE_POKEMOVE7
+			| ITEM_ATTRIBUTE_POKEMOVE8 | ITEM_ATTRIBUTE_POKEMOVE9 | ITEM_ATTRIBUTE_POKEMOVE10;
 		const static uint32_t stringAttributeTypes = ITEM_ATTRIBUTE_DESCRIPTION | ITEM_ATTRIBUTE_TEXT | ITEM_ATTRIBUTE_WRITER
 			| ITEM_ATTRIBUTE_NAME | ITEM_ATTRIBUTE_ARTICLE | ITEM_ATTRIBUTE_PLURALNAME | ITEM_ATTRIBUTE_POKEBALL | ITEM_ATTRIBUTE_POKEDATE;
 
@@ -883,11 +939,65 @@ class Item : virtual public Thing
 			return static_cast<uint16_t>(getIntAttr(ITEM_ATTRIBUTE_POKEADDON));
 		}
 
-		void setPokeMoves(uint16_t valueMoves) {
-			setIntAttr(ITEM_ATTRIBUTE_POKEMOVES, valueMoves);
+		void setPokeMoves1(const std::string& _valueMoves1) {
+			setStrAttr(ITEM_ATTRIBUTE_POKEMOVE1, _valueMoves1);
 		}
-		uint16_t getPokeMoves() const {
-			return static_cast<uint16_t>(getIntAttr(ITEM_ATTRIBUTE_POKEMOVES));
+		const std::string& getPokeMoves1() const {
+			return getStrAttr(ITEM_ATTRIBUTE_POKEMOVE1);
+		}
+		void setPokeMoves2(const std::string& _valueMoves2) {
+			setStrAttr(ITEM_ATTRIBUTE_POKEMOVE2, _valueMoves2);
+		}
+		const std::string& getPokeMoves2() const {
+			return getStrAttr(ITEM_ATTRIBUTE_POKEMOVE2);
+		}
+		void setPokeMoves3(const std::string& _valueMoves3) {
+			setStrAttr(ITEM_ATTRIBUTE_POKEMOVE3, _valueMoves3);
+		}
+		const std::string& getPokeMoves3() const {
+			return getStrAttr(ITEM_ATTRIBUTE_POKEMOVE3);
+		}
+		void setPokeMoves4(const std::string& _valueMoves4) {
+			setStrAttr(ITEM_ATTRIBUTE_POKEMOVE4, _valueMoves4);
+		}
+		const std::string& getPokeMoves4() const {
+			return getStrAttr(ITEM_ATTRIBUTE_POKEMOVE4);
+		}
+		void setPokeMoves5(const std::string& _valueMoves5) {
+			setStrAttr(ITEM_ATTRIBUTE_POKEMOVE5, _valueMoves5);
+		}
+		const std::string& getPokeMoves5() const {
+			return getStrAttr(ITEM_ATTRIBUTE_POKEMOVE5);
+		}
+		void setPokeMoves6(const std::string& _valueMoves6) {
+			setStrAttr(ITEM_ATTRIBUTE_POKEMOVE6, _valueMoves6);
+		}
+		const std::string& getPokeMoves6() const {
+			return getStrAttr(ITEM_ATTRIBUTE_POKEMOVE6);
+		}
+		void setPokeMoves7(const std::string& _valueMoves7) {
+			setStrAttr(ITEM_ATTRIBUTE_POKEMOVE7, _valueMoves7);
+		}
+		const std::string& getPokeMoves7() const {
+			return getStrAttr(ITEM_ATTRIBUTE_POKEMOVE7);
+		}
+		void setPokeMoves8(const std::string& _valueMoves8) {
+			setStrAttr(ITEM_ATTRIBUTE_POKEMOVE8, _valueMoves8);
+		}
+		const std::string& getPokeMoves8() const {
+			return getStrAttr(ITEM_ATTRIBUTE_POKEMOVE8);
+		}
+		void setPokeMoves9(const std::string& _valueMoves9) {
+			setStrAttr(ITEM_ATTRIBUTE_POKEMOVE9, _valueMoves9);
+		}
+		const std::string& getPokeMoves9() const {
+			return getStrAttr(ITEM_ATTRIBUTE_POKEMOVE9);
+		}
+		void setPokeMoves10(const std::string& _valueMoves10) {
+			setStrAttr(ITEM_ATTRIBUTE_POKEMOVE10, _valueMoves10);
+		}
+		const std::string& getPokeMoves10() const {
+			return getStrAttr(ITEM_ATTRIBUTE_POKEMOVE10);
 		}
 
 		void setCorpseOwner(uint32_t corpseOwner) {

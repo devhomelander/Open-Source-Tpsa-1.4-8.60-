@@ -707,16 +707,6 @@ Attr_ReadValue Item::readAttr(AttrTypes_t attr, PropStream& propStream)
 			break;
 		}
 
-		case ATTR_POKEMOVES: {
-			uint16_t moves;
-			if (!propStream.read<uint16_t>(moves)) {
-				return ATTR_READ_ERROR;
-			}
-
-			setPokeMoves(moves);
-			break;
-		}
-
 		//Container class
 		case ATTR_CONTAINER_ITEMS: {
 			return ATTR_READ_ERROR;
@@ -864,12 +854,6 @@ void Item::serializeAttr(PropWriteStream& propWriteStream) const
 	if (addon != 0) {
 		propWriteStream.write<uint8_t>(ATTR_POKEADDON);
 		propWriteStream.write<uint16_t>(addon);
-	}
-
-	uint16_t moves = getPokeMoves();
-	if (moves != 0) {
-		propWriteStream.write<uint8_t>(ATTR_POKEMOVES);
-		propWriteStream.write<uint16_t>(moves);
 	}
 
 	if (hasAttribute(ITEM_ATTRIBUTE_DURATION)) {
