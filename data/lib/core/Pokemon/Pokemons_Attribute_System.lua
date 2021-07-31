@@ -115,15 +115,7 @@ GoPokemon(player, ball)
 player:sendTextMessage(MESSAGE_STATUS_SMALL,player:getName() .. " Congratulations, you managed to evolve your " .. pokeball .. " for " .. pokemons_evolution.evolution .. ".")
 end
 
-function adjustMove(player)
-
-    local slot = player:getSlotItem(CONST_SLOT_FEET)
-
-    if(not(slot))then
-        return
-    end
-
-    local pokeball_name = slot:getAttribute(ITEM_ATTRIBUTE_POKEBALL)
+function Item:adjustMove(player, pokeball_name)
 
     local table_move_teste = MOVE_CONFIG[pokeball_name]
 
@@ -131,5 +123,5 @@ function adjustMove(player)
         return
     end
 
-    return slot:setAttribute(ITEM_ATTRIBUTE_POKEMOVES, 1)
+    return self:setAttribute(ITEM_ATTRIBUTE_POKEMOVES, 1)
 end
