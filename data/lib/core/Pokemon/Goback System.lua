@@ -110,7 +110,7 @@ Pokemon:addonTransformOutfit(addon, pokeball)
 
 item:adjustMove(pokeball)
 
-local teste_attribute_moves = item:getAttribute(ITEM_ATTRIBUTE_POKEMOVE1)
+local teste_attribute_moves = item:getAttribute(ITEM_ATTRIBUTE_POKEMOVE)
 
 print(teste_attribute_moves)
 

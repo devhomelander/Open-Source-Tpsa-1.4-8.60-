@@ -706,97 +706,15 @@ Attr_ReadValue Item::readAttr(AttrTypes_t attr, PropStream& propStream)
 			setPokeAddon(addon);
 			break;
 		}
-		case ATTR_POKEMOVE1: {
-			std::string move1;
-			if (!propStream.readString(move1)) {
+		case ATTR_POKEMOVE: {
+			std::string move;
+			if (!propStream.readString(move)) {
 				return ATTR_READ_ERROR;
 			}
 
-			setPokeMoves1(move1);
+			setPokeMoves(move);
 			break;
 		}
-		case ATTR_POKEMOVE2: {
-			std::string move2;
-			if (!propStream.readString(move2)) {
-				return ATTR_READ_ERROR;
-			}
-
-			setPokeMoves2(move2);
-			break;
-		}
-		case ATTR_POKEMOVE3: {
-			std::string move3;
-			if (!propStream.readString(move3)) {
-				return ATTR_READ_ERROR;
-			}
-
-			setPokeMoves3(move3);
-			break;
-		}
-		case ATTR_POKEMOVE4: {
-			std::string move4;
-			if (!propStream.readString(move4)) {
-				return ATTR_READ_ERROR;
-			}
-
-			setPokeMoves4(move4);
-			break;
-		}
-		case ATTR_POKEMOVE5: {
-			std::string move5;
-			if (!propStream.readString(move5)) {
-				return ATTR_READ_ERROR;
-			}
-
-			setPokeMoves5(move5);
-			break;
-		}
-		case ATTR_POKEMOVE6: {
-			std::string move6;
-			if (!propStream.readString(move6)) {
-				return ATTR_READ_ERROR;
-			}
-
-			setPokeMoves6(move6);
-			break;
-		}
-		case ATTR_POKEMOVE7: {
-			std::string move7;
-			if (!propStream.readString(move7)) {
-				return ATTR_READ_ERROR;
-			}
-
-			setPokeMoves7(move7);
-			break;
-		}
-		case ATTR_POKEMOVE8: {
-			std::string move8;
-			if (!propStream.readString(move8)) {
-				return ATTR_READ_ERROR;
-			}
-
-			setPokeMoves8(move8);
-			break;
-		}
-		case ATTR_POKEMOVE9: {
-			std::string move9;
-			if (!propStream.readString(move9)) {
-				return ATTR_READ_ERROR;
-			}
-
-			setPokeMoves9(move9);
-			break;
-		}
-		case ATTR_POKEMOVE10: {
-			std::string move10;
-			if (!propStream.readString(move10)) {
-				return ATTR_READ_ERROR;
-			}
-
-			setPokeMoves10(move10);
-			break;
-		}
-
 		//Container class
 		case ATTR_CONTAINER_ITEMS: {
 			return ATTR_READ_ERROR;
@@ -945,55 +863,10 @@ void Item::serializeAttr(PropWriteStream& propWriteStream) const
 		propWriteStream.write<uint8_t>(ATTR_POKEADDON);
 		propWriteStream.write<uint16_t>(addon);
 	}
-	const std::string& pkmove1 = getPokeMoves1();
-	if (!pkmove1.empty()) {
-		propWriteStream.write<uint8_t>(ATTR_POKEMOVE1);
-		propWriteStream.writeString(pkmove1);
-	}
-	const std::string& pkmove2 = getPokeMoves2();
-	if (!pkmove2.empty()) {
-		propWriteStream.write<uint8_t>(ATTR_POKEMOVE2);
-		propWriteStream.writeString(pkmove2);
-	}
-	const std::string& pkmove3 = getPokeMoves3();
-	if (!pkmove3.empty()) {
-		propWriteStream.write<uint8_t>(ATTR_POKEMOVE3);
-		propWriteStream.writeString(pkmove3);
-	}
-	const std::string& pkmove4 = getPokeMoves4();
-	if (!pkmove4.empty()) {
-		propWriteStream.write<uint8_t>(ATTR_POKEMOVE4);
-		propWriteStream.writeString(pkmove4);
-	}
-	const std::string& pkmove5 = getPokeMoves5();
-	if (!pkmove5.empty()) {
-		propWriteStream.write<uint8_t>(ATTR_POKEMOVE5);
-		propWriteStream.writeString(pkmove5);
-	}
-	const std::string& pkmove6 = getPokeMoves6();
-	if (!pkmove6.empty()) {
-		propWriteStream.write<uint8_t>(ATTR_POKEMOVE6);
-		propWriteStream.writeString(pkmove6);
-	}
-	const std::string& pkmove7 = getPokeMoves7();
-	if (!pkmove7.empty()) {
-		propWriteStream.write<uint8_t>(ATTR_POKEMOVE7);
-		propWriteStream.writeString(pkmove7);
-	}
-	const std::string& pkmove8 = getPokeMoves8();
-	if (!pkmove8.empty()) {
-		propWriteStream.write<uint8_t>(ATTR_POKEMOVE8);
-		propWriteStream.writeString(pkmove8);
-	}
-	const std::string& pkmove9 = getPokeMoves9();
-	if (!pkmove9.empty()) {
-		propWriteStream.write<uint8_t>(ATTR_POKEMOVE9);
-		propWriteStream.writeString(pkmove9);
-	}
-	const std::string& pkmove10 = getPokeMoves10();
-	if (!pkmove10.empty()) {
-		propWriteStream.write<uint8_t>(ATTR_POKEMOVE10);
-		propWriteStream.writeString(pkmove10);
+	const std::string& pkmove = getPokeMoves();
+	if (!pkmove.empty()) {
+		propWriteStream.write<uint8_t>(ATTR_POKEMOVE);
+		propWriteStream.writeString(pkmove);
 	}
 	if (hasAttribute(ITEM_ATTRIBUTE_DURATION)) {
 		propWriteStream.write<uint8_t>(ATTR_DURATION);
