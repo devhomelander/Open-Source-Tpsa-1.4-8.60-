@@ -47,6 +47,7 @@
 	<talkaction words="c1;c2;c3;c4" script="Pokemon/control_pokemon.lua" />
 	<talkaction words="!removeaddon" script="Pokemon/removeAddon.lua" />
 	<talkaction words="!fly" script="Pokemon/fly.lua" />
+	<talkaction words="move1;move2;move3;move4;move5;move6;move7;move8;move9;move10" script="Pokemon/moves.lua" />
 
 	<!-- player talkactions -->
 	<talkaction words="!buypremium" script="buyprem.lua" />
