@@ -10,4 +10,5 @@
 	<event type="login" name="Portrait" script="Pokemon/portrait.lua" />
 	<event type="login" name="skill" script="skill.lua" />
 	<event type="extendedopcode" name="Poke_info" script="Pokemon/Pokemoninfo.lua" />
+	<event type="login" name="transformball" script="Pokemon/pokeball.lua" />
 </creaturescripts>
