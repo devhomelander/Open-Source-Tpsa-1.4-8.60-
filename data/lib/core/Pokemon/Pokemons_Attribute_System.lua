@@ -131,6 +131,5 @@ function adjustMove(player)
         return
     end
 
-    
-
+    return slot:setAttribute(ITEM_ATTRIBUTE_MOVES, 
 end
