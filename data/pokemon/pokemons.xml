@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pokemons>
+    <pokemon name="Charmander" file="first generation/Charmander.xml" />
+	<pokemon name="Charmeleon" file="first generation/Charmeleon.xml" />
+	<pokemon name="beedrill" file="first generation/beedrill.xml" />
+	<pokemon name="Nidorina" file="first generation/Nidorina.xml" />
+	<pokemon name="Growlithe" file="first generation/Growlithe.xml"/>
+	<pokemon name="Charizard" file="first generation/Charizard.xml"/>
+	<pokemon name="Arbok" file="first generation/Arbok.xml"/>
+	<pokemon name="Ditto" file="first generation/Ditto.xml"/>
+</pokemons>
