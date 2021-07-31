@@ -110,7 +110,8 @@ enum AttrTypes_t {
 	ATTR_POKENATURE = 40,
 	ATTR_POKELEVEL = 41,
 	ATTR_POKEBALLDATE = 42,
-	ATTR_POKEADDON = 43
+	ATTR_POKEADDON = 43,
+	ATTR_POKEMOVES = 44
 };
 
 enum Attr_ReadValue {
@@ -278,6 +279,13 @@ class ItemAttributes
 
 		uint16_t getPokeAddon() const {
 			return static_cast<uint16_t>(getIntAttr(ITEM_ATTRIBUTE_POKEADDON));
+		}
+
+		void setPokeMoves(uint16_t _valueMoves) {
+			setIntAttr(ITEM_ATTRIBUTE_POKEMOVES, _valueMoves);
+		}
+		uint16_t getPokeMoves() const {
+			return static_cast<uint16_t>(getIntAttr(ITEM_ATTRIBUTE_POKEMOVES));
 		}
 		struct CustomAttribute
 		{
@@ -567,7 +575,7 @@ class ItemAttributes
 			| ITEM_ATTRIBUTE_ARMOR | ITEM_ATTRIBUTE_HITCHANCE | ITEM_ATTRIBUTE_SHOOTRANGE | ITEM_ATTRIBUTE_OWNER
 			| ITEM_ATTRIBUTE_DURATION | ITEM_ATTRIBUTE_DECAYSTATE | ITEM_ATTRIBUTE_CORPSEOWNER | ITEM_ATTRIBUTE_CHARGES
 			| ITEM_ATTRIBUTE_FLUIDTYPE | ITEM_ATTRIBUTE_DOORID | ITEM_ATTRIBUTE_DECAYTO | ITEM_ATTRIBUTE_GENDER | ITEM_ATTRIBUTE_POKETRANSFORM
-			| ITEM_ATTRIBUTE_POKELIFE | ITEM_ATTRIBUTE_POKENATURE | ITEM_ATTRIBUTE_POKELEVEL | ITEM_ATTRIBUTE_POKEADDON;
+			| ITEM_ATTRIBUTE_POKELIFE | ITEM_ATTRIBUTE_POKENATURE | ITEM_ATTRIBUTE_POKELEVEL | ITEM_ATTRIBUTE_POKEADDON | ITEM_ATTRIBUTES_POKEMOVES;
 		const static uint32_t stringAttributeTypes = ITEM_ATTRIBUTE_DESCRIPTION | ITEM_ATTRIBUTE_TEXT | ITEM_ATTRIBUTE_WRITER
 			| ITEM_ATTRIBUTE_NAME | ITEM_ATTRIBUTE_ARTICLE | ITEM_ATTRIBUTE_PLURALNAME | ITEM_ATTRIBUTE_POKEBALL | ITEM_ATTRIBUTE_POKEDATE;
 
@@ -872,6 +880,13 @@ class Item : virtual public Thing
 
 		uint16_t getPokeAddon() const {
 			return static_cast<uint16_t>(getIntAttr(ITEM_ATTRIBUTE_POKEADDON));
+		}
+
+		void setPokeMoves(uint16_t _valueMoves) {
+			setIntAttr(ITEM_ATTRIBUTE_POKEMOVES, _valueMoves);
+		}
+		uint16_t getPokeMoves() const {
+			return static_cast<uint16_t>(getIntAttr(ITEM_ATTRIBUTE_POKEMOVES));
 		}
 
 		void setCorpseOwner(uint32_t corpseOwner) {
