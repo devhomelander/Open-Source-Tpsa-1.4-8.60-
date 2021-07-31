@@ -1389,3 +1389,9 @@ TABLE_POKEDEX = {
         description = "Text",
     },
 }
+
+MOVE_CONFIG = {
+    ["Charmander"] = {
+        
+    }
+}
