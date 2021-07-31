@@ -102,17 +102,17 @@ KEYS = {
 
 function getItemAttribute(item, key)
 
-if not item then
+if(not(item))then
 
-return print(">> - getItemAttribute() " .. " : " .. "Item does not exist")
+return print(">> - doItemSetAttribute() " .. " : " .. "Item does not exist")
 
 end
 
 local keyNames = KEYS[key]
 
-if not keyNames then
+if(not(keyNames))then
 
-return print(">> - getItemAttribute() " .. " : " .. "This key : ( " .. key .. " ) does not exist")
+return print(">> - doItemSetAttribute() " .. " : " .. "That " .. key .. " does not exist")
 
 end
 
@@ -124,7 +124,7 @@ end
 
 function doItemSetAttribute(item, key, value)
 
-if not item then
+if(not(item))then
 
 return print(">> - doItemSetAttribute() " .. " : " .. "Item does not exist")
         
@@ -132,10 +132,14 @@ end
 
 local keyNames = KEYS[key]
 
-if not keyNames then
+if(not(keyNames))then
 
 return print(">> - doItemSetAttribute() " .. " : " .. "That " .. key .. " does not exist")
 
+end
+
+if(value == nil)then
+    return print("That : " ..  value .. " is equal to nil")
 end
 
 local Set_Key_Attribute = item:setAttribute(keyNames.nameAttribute, value)
