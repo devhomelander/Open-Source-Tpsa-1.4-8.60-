@@ -74,6 +74,27 @@ KEYS = {
     ["decayto"] = {
         nameAttribute = ITEM_ATTRIBUTE_DECAYTO,
     },
+    ["pokeball"] = {
+        nameAttribute = ITEM_ATTRIBUTE_POKEBALL,
+    },
+    ["pokegender"] = {
+        nameAttribute = ITEM_ATTRIBUTE_GENDER,
+    },
+    ["pokeballtransform"] = {
+        nameAttribute = ITEM_ATTRIBUTE_POKETRANSFORM,
+    },
+    ["pokelife"] = {
+        nameAttribute = ITEM_ATTRIBUTE_POKELIFE,
+    },
+    ["pokenature"] = {
+        nameAttribute = ITEM_ATTRIBUTE_POKENATURE,
+    },
+    ["pokelevel"] = {
+        nameAttribute = ITEM_ATTRIBUTE_POKELEVEL,
+    },
+    ["pokemoves"] = {
+        nameAttribute = ITEM_ATTRIBUTE_POKEMOVES,
+    },
     ["custom"] = {
         nameAttribute = ITEM_ATTRIBUTE_CUSTOM,
     },
