@@ -115,7 +115,7 @@ GoPokemon(player, ball)
 player:sendTextMessage(MESSAGE_STATUS_SMALL,player:getName() .. " Congratulations, you managed to evolve your " .. pokeball .. " for " .. pokemons_evolution.evolution .. ".")
 end
 
-function Item:adjustMove(player, pokeball_name)
+function Item:adjustMove(pokeball_name)
 
     local table_move_teste = MOVE_CONFIG[pokeball_name]
 
