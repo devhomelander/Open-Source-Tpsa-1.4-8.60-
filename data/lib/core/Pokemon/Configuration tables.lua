@@ -1392,6 +1392,6 @@ TABLE_POKEDEX = {
 
 MOVE_CONFIG = {
     ["Charmander"] = {
-        
+        [1] = {}
     }
 }
