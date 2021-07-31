@@ -108,7 +108,7 @@ Pokemon:addonTransformOutfit(addon, pokeball)
 
 --Monster:levelSystem(player, level)
 
-Pokemon:
+adjustMove(player)
 
 player:monsterInfo(Pokemon)
 

@@ -131,5 +131,5 @@ function adjustMove(player)
         return
     end
 
-    return slot:setAttribute(ITEM_ATTRIBUTE_MOVES, 1)
+    return slot:setAttribute(ITEM_ATTRIBUTE_POKEMOVES, 1)
 end

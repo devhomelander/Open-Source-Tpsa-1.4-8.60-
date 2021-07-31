@@ -129,9 +129,9 @@ class Creature : virtual public Thing
 
 		virtual const std::string& getName() const = 0;
         
-		void setName(const std::string& names){
-			name = names;
-		}
+		//void setName(const std::string& names){
+		/// = names;
+		//}
 
 		virtual const std::string& getNameDescription() const = 0;
 
