@@ -26,3 +26,5 @@ dofile('data/lib/core/Pokemon/Attribute_Tfs_0.x.lua')
 dofile('data/lib/core/Pokemon/Addon System.lua')
 dofile('data/lib/core/Pokemon/PokeInfo System.lua')
 dofile('data/lib/core/Pokemon/Ditto System.lua')
+dofile('data/lib/core/Pokemon/Combat System.lua')
+
