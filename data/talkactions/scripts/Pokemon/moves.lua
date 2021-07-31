@@ -3,8 +3,10 @@ function onSay(player, words, param)
     if(not(slot))then
         return
     end
-    
+
     local pokeball = slot:getAttribute(ITEM_ATTRIBUTE_POKEBALL)
+
+    
 
     local pokemon = player:getSummons()[1]
     if(not(pokemon))then

@@ -114,3 +114,7 @@ pk:returnPokemon(player, ball)
 GoPokemon(player, ball)
 player:sendTextMessage(MESSAGE_STATUS_SMALL,player:getName() .. " Congratulations, you managed to evolve your " .. pokeball .. " for " .. pokemons_evolution.evolution .. ".")
 end
+
+function Monster:adjustMove(player)
+
+end

@@ -108,6 +108,8 @@ Pokemon:addonTransformOutfit(addon, pokeball)
 
 --Monster:levelSystem(player, level)
 
+Pokemon:
+
 player:monsterInfo(Pokemon)
 
 local message = {"Duel time, " .. pokeball .. "",
