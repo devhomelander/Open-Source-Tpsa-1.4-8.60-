@@ -26,6 +26,10 @@ onLookPokeball(player, item, aa, bb, level, nature, pokedate)
 player:sendTextMessage(MESSAGE_STATUS_SMALL, player:getName() .. " Congratulations you managed to capture " .. aa )
 end
 
+function Item:moveDepot()
+
+end
+
 function catchPokemon(player, item, fromPosition, target, toPosition)
 local random = math.random(1, 2)
 local pokemon = corpse[target.itemid]
