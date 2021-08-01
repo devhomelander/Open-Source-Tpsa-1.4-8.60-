@@ -138,9 +138,9 @@ Pokemon:getPosition():sendMagicEffect(transforsms[1])
 
 item:transform(transformballs.transform)
 
-item:setAttribute(ITEM_ATTRIBUTE_POKEBALLMOVE, 1)
+--item:setAttribute(ITEM_ATTRIBUTE_POKEBALLMOVE, 1)
 
-print(item:getAttribute(ITEM_ATTRIBUTE_POKEBALLMOVE))
+--print(item:getAttribute(ITEM_ATTRIBUTE_POKEBALLMOVE))
 
 return true
 
@@ -160,7 +160,7 @@ Pokemon:getPosition():sendMagicEffect(balls[2])
 
 item:transform(balls[1], 1)
 
-item:setAttribute(ITEM_ATTRIBUTE_POKEBALLMOVE, 1)
+--item:setAttribute(ITEM_ATTRIBUTE_POKEBALLMOVE, 1)
 
 return true
 
@@ -212,7 +212,7 @@ local transss = item:getAttribute(ITEM_ATTRIBUTE_POKETRANSFORM)
 
 --item:setAttribute(ITEM_ATTRIBUTE_UNIQUEID, 0)
 
-item:removeAttribute(ITEM_ATTRIBUTE_POKEBALLMOVE)
+--item:removeAttribute(ITEM_ATTRIBUTE_POKEBALLMOVE)
 
 local transformsss = transform[transss]
 
