@@ -45,7 +45,7 @@ toPosition:sendMagicEffect(pokeball.efect)
 player:getPosition():sendDistanceEffect(toPosition, pokeball.efect2)
 target:remove()
 item:remove(1)
-addEvent(receiveCapturedPokemon, 3000,player.uid, 2051, pokemon[1])
+addEvent(receiveCapturedPokemon, 3000,player.uid, pokeball.addpokeball, pokemon[1])
 return true
 end
 if(random == 2)then

@@ -1113,7 +1113,7 @@ corpse = {
 }
 
 pokeballscatch = {
-	[2012] = {efect = 194,efect2 = 56,efect3 = 145,efect3false = 193, pokeballss = {2051}},
+	[2012] = {efect = 194,efect2 = 56,efect3 = 145,efect3false = 193, addpokeball = 2051},
 }
 
 gendeRandom = {1,2,3}
