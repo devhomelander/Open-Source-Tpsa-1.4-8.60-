@@ -15,13 +15,21 @@ end
 end
 
 function Player:moveSlot(slot)
+local slot_bag = self:getSlotItem(slot)
+if(not(slot_bag))then
+    return
+end
+local ball = Item(slot_bag.uid)
+if(not(ball))then
+    return
+end
 
 end
 
 function Pokebar(player)
 local pokeball_item = player:getSlotItem(8)
 if(not(pokeball_item))then
-    return
+    return player:moveSlot(8)
 end
 if(#player:getSummons() >= 1)then
     return pokeball_item:returnPokemonBar(player)
