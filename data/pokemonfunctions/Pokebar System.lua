@@ -26,7 +26,7 @@ end
 if(#player:getSummons() >= 1)then
     return pokeball_item:returnPokemonBar(player)
 end
-local teste = player:getItemCount(pokeball_item.uid)
+local teste = player:getItemCount(pokeball_item)
 print(teste)
 GoPokemon(player, pokeball_item)
 end
