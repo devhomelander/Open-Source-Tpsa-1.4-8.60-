@@ -12,7 +12,7 @@ else
 player:setStorageValue(config.STORAGE, 1)
 player:addItem(config.POKEBALL, 150)
 player:addItem(config.MONEY, 12)
-addPoke(player, config.POKEMON, config.BALL) -- função na lib!
+player:addPoke(config.POKEMON, config.BALL) -- função na lib!
 return player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, player:getName() .. " Thank you for joining our alpha!") and true
 end	
 end
