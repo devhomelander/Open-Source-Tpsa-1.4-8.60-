@@ -70,7 +70,7 @@ end
 
 local pos = player:getPosition()
 
-Pokemon = Game.createMonster(pokeball, pos, true, true)
+Pokemon = Game.createMonster(pokeball, pos, true, false)
 
 if not Pokemon then
 
