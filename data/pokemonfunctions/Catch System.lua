@@ -24,10 +24,10 @@ item:setAttribute(ITEM_ATTRIBUTE_POKEDATE, date)
 local pokedate  = item:getAttribute(ITEM_ATTRIBUTE_POKEDATE)
 onLookPokeball(player, item, aa, bb, level, nature, pokedate)
 player:sendTextMessage(MESSAGE_STATUS_SMALL, player:getName() .. " Congratulations you managed to capture " .. aa )
+item:moveDepot()
 end
 
 function Item:moveDepot()
-
 end
 
 function catchPokemon(player, item, fromPosition, target, toPosition)
