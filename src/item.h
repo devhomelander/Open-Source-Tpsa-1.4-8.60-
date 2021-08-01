@@ -282,10 +282,16 @@ class ItemAttributes
 		}
 
 		void setPokeMoves(const std::string& _valueMoves) {
-			setStrAttr(ITEM_ATTRIBUTE_POKEMOVE, _valueMoves);
+			setStrAttr(ITEM_ATTRIBUTE_POKEMOVECOMBAT, _valueMoves);
 		}
 		const std::string& getPokeMoves() const {
-			return getStrAttr(ITEM_ATTRIBUTE_POKEMOVE);
+			return getStrAttr(ITEM_ATTRIBUTE_POKEMOVECOMBAT);
+		}
+		void setPokeballMove(uint8_t moveball) {
+			setIntAttr(ITEM_ATTRIBUTE_POKEBALLMOVE, moveball);
+		}
+		uint8_t getPokeballMove() const {
+			return static_cast<uint8_t>(getIntAttr(ITEM_ATTRIBUTE_POKEBALLMOVE));
 		}
 		struct CustomAttribute
 		{
@@ -576,9 +582,10 @@ class ItemAttributes
 			| ITEM_ATTRIBUTE_DURATION | ITEM_ATTRIBUTE_DECAYSTATE | ITEM_ATTRIBUTE_CORPSEOWNER | ITEM_ATTRIBUTE_CHARGES
 			| ITEM_ATTRIBUTE_FLUIDTYPE | ITEM_ATTRIBUTE_DOORID | ITEM_ATTRIBUTE_DECAYTO | ITEM_ATTRIBUTE_GENDER
 			| ITEM_ATTRIBUTE_POKETRANSFORM | ITEM_ATTRIBUTE_POKELIFE | ITEM_ATTRIBUTE_POKENATURE | ITEM_ATTRIBUTE_POKELEVEL
-			| ITEM_ATTRIBUTE_POKEADDON | ITEM_ATTRIBUTE_POKEMOVE;
-		const static uint32_t stringAttributeTypes = ITEM_ATTRIBUTE_DESCRIPTION | ITEM_ATTRIBUTE_TEXT | ITEM_ATTRIBUTE_WRITER
-			| ITEM_ATTRIBUTE_NAME | ITEM_ATTRIBUTE_ARTICLE | ITEM_ATTRIBUTE_PLURALNAME | ITEM_ATTRIBUTE_POKEBALL | ITEM_ATTRIBUTE_POKEDATE;
+			| ITEM_ATTRIBUTE_POKEADDON | ITEM_ATTRIBUTE_POKEBALLMOVE;
+		const static uint64_t stringAttributeTypes = ITEM_ATTRIBUTE_DESCRIPTION | ITEM_ATTRIBUTE_TEXT | ITEM_ATTRIBUTE_WRITER
+			| ITEM_ATTRIBUTE_NAME | ITEM_ATTRIBUTE_ARTICLE | ITEM_ATTRIBUTE_PLURALNAME | ITEM_ATTRIBUTE_POKEBALL | ITEM_ATTRIBUTE_POKEDATE
+			| ITEM_ATTRIBUTE_POKEMOVECOMBAT;
 
 	public:
 		static bool isIntAttrType(itemAttrTypes type) {
@@ -884,10 +891,16 @@ class Item : virtual public Thing
 		}
 
 		void setPokeMoves(const std::string& _valueMoves) {
-			setStrAttr(ITEM_ATTRIBUTE_POKEMOVE, _valueMoves);
+			setStrAttr(ITEM_ATTRIBUTE_POKEMOVECOMBAT, _valueMoves);
 		}
 		const std::string& getPokeMoves() const {
-			return getStrAttr(ITEM_ATTRIBUTE_POKEMOVE);
+			return getStrAttr(ITEM_ATTRIBUTE_POKEMOVECOMBAT);
+		}
+		void setPokeballMove(uint8_t moveball) {
+			setIntAttr(ITEM_ATTRIBUTE_POKEBALLMOVE, moveball);
+		}
+		uint8_t getPokeballMove() const {
+			return static_cast<uint8_t>(getIntAttr(ITEM_ATTRIBUTE_POKEBALLMOVE));
 		}
 		void setCorpseOwner(uint32_t corpseOwner) {
 			setIntAttr(ITEM_ATTRIBUTE_CORPSEOWNER, corpseOwner);
