@@ -11,5 +11,5 @@
 	<event type="login" name="skill" script="skill.lua" />
 	<event type="extendedopcode" name="Poke_info" script="Pokemon/Pokemoninfo.lua" />
 	<event type="login" name="transformball" script="Pokemon/pokeball.lua" />
-	<event type="" name="transformball" script="Pokemon/pokeball.lua" />
+	<event type="death" name="Summondeath" script="Pokemon/dead_Summon.lua" />
 </creaturescripts>
