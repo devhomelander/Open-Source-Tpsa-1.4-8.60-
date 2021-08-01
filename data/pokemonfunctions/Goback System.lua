@@ -70,19 +70,11 @@ end
 
 local pos = player:getPosition()
 
-Pokemon = Game.createMonster(pokeball, pos, true, false)
+Pokemon = Game.createMonster(pokeball, pos, true, true)
 
 if not Pokemon then
 
-local poke = Game.createMonster(pokeball, pos, true, true)
-
-if not poke then
-    
 return player:sendTextMessage(MESSAGE_STATUS_SMALL, player:getName() .." Sorry you can't summon a " .. pokeball .. ", contact a member of staff!.") and true
-
-end
-
-return poke
 
 end
 
