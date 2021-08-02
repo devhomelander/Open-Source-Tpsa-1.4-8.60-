@@ -136,19 +136,11 @@ return true
 
 else
 
-local balls = pokeballs[item.itemid]
+player:getPosition():sendDistanceEffect(pk, item.misilego)
 
-if not balls then
+Pokemon:getPosition():sendMagicEffect(item.effectgo)
 
-return false
-
-end
-
-player:getPosition():sendDistanceEffect(pk, balls[3])
-
-Pokemon:getPosition():sendMagicEffect(balls[2])
-
-item:transform(balls[1], 1)
+item:transform(item.transformgo)
 
 item:setAttribute(ITEM_ATTRIBUTE_POKEBALLMOVE, 1) -- This attribute is configured in c++, to not let the pokeball move when a pokemon is out
 
@@ -220,19 +212,11 @@ return true
 
 else
 
-local itemballs = pokeballs[item.itemid]
+item:transform(item.transformreturn)
 
-if not (itemballs) then
+self:getPosition():sendDistanceEffect(pk, item.misilego)
 
-return false
-
-end
-
-item:transform(itemballs[1])
-
-self:getPosition():sendDistanceEffect(pk, itemballs[3])
-
-self:getPosition():sendMagicEffect(itemballs[2])
+self:getPosition():sendMagicEffect(item.effectgo)
 
 self:remove()
 

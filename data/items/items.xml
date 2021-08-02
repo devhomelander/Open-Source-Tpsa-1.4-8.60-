@@ -1800,19 +1800,31 @@
 		<attribute key="slotType" value="feet" />
 	</item>
 	<item id="2050" article="a" name="Pokeball dead">
+		<attribute key="effectgo" value="189" />
+		<attribute key="transformreturn" value="2051" />
+		<attribute key="misilego" value="48" />
 		<attribute key="slotType" value="feet" />
 	</item>
 	<item id="2051" article="a" name="Pokeball">
 		<attribute key="slotType" value="feet" />
+		<attribute key="transformgo" value="2050" />
+		<attribute key="effectgo" value="189" />
+		<attribute key="misilego" value="48" />
 	</item>
 	<item id="2052" article="a" name="Ultra Ball">
 		<attribute key="slotType" value="feet" />
+		<attribute key="transformgo" value="2055" />
+		<attribute key="effectgo" value="190" />
+		<attribute key="misilego" value="49" />
 	</item>
 	<item id="2053" article="a" name="lit torch">
 		<attribute key="slotType" value="feet" />
 	</item>
 	<item id="2054" article="a" name="Great Ball">
 		<attribute key="slotType" value="feet" />
+		<attribute key="transformgo" value="2057" />
+		<attribute key="effectgo" value="192" />
+		<attribute key="misilego" value="50" />
 	</item>
 	<item id="2055" article="a" name="lit torch">
 		<attribute key="slotType" value="feet" />
