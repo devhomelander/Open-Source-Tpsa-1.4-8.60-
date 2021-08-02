@@ -922,7 +922,7 @@ void Game::playerMoveItem(Player* player, const Position& fromPos,
 	}
 
 	if (item->hasAttribute(ITEM_ATTRIBUTE_POKEBALLMOVE)) {
-		player->sendCancelMessage(RETURNVALUE_NOTMOVEABLE);
+		player->sendCancelMessage("You can't move the pokeball with the pokemon outside of it");
 		return;
 	}
 
