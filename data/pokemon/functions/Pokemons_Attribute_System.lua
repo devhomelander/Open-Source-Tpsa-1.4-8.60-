@@ -114,7 +114,7 @@ GoPokemon(player, slot)
 player:sendTextMessage(MESSAGE_STATUS_SMALL,player:getName() .. " Congratulations, you managed to evolve your " .. pokeball .. " for " .. pokemons_evolution.evolution .. ".")
 end
 
-function Item:adjustMove(pokeball_name)
+--[[function Item:adjustMove(pokeball_name)
 
     local table_move_teste = MOVE_CONFIG[pokeball_name]
 
@@ -123,4 +123,4 @@ function Item:adjustMove(pokeball_name)
     end
 
     return self:setAttribute(ITEM_ATTRIBUTE_POKEMOVECOMBAT, table_move_teste.spellName)
-end
+end]]

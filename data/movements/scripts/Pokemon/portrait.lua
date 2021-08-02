@@ -9,7 +9,7 @@ if not sloot then
 player:addItem(pokemon.photo, 1)
 return true
 end
-sloot:setAttribute(ITEM_ATTRIBUTE_POKEBALLMOVE, 1)
+--sloot:setAttribute(ITEM_ATTRIBUTE_POKEBALLMOVE, 1)
 sloot:transform(pokemon.photo)
 return true
 end
@@ -19,7 +19,7 @@ if not potrait then
 player:addItem(12660, 1)
 return false
 end
-potrait:setAttribute(ITEM_ATTRIBUTE_POKEBALLMOVE, 1)
+--potrait:setAttribute(ITEM_ATTRIBUTE_POKEBALLMOVE, 1)
 potrait:transform(12660)
 return false
 end
