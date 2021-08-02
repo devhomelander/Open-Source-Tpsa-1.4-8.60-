@@ -1383,6 +1383,6 @@ TABLE_POKEDEX = {
 
 MOVE_CONFIG = {
     ["Charmander"] = {
-        [1] = {}
+        spellName = "teste",
     }
 }

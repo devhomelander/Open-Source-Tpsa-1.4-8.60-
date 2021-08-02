@@ -108,10 +108,9 @@ local pkgender = slot:getAttribute(ITEM_ATTRIBUTE_GENDER)
 local pknature = slot:getAttribute(ITEM_ATTRIBUTE_POKENATURE)
 local pkdate = slot:getAttribute(ITEM_ATTRIBUTE_POKEDATE)
 slot:removeAttribute(ITEM_ATTRIBUTE_NAME)
-local ball = Item(slot.uid)
-ball:onLookPokeball(player, evolution, pkgender, pklevel, pknature, pkdate)
-pk:returnPokemon(player, ball)
-GoPokemon(player, ball)
+slot:onLookPokeball(player, evolution, pkgender, pklevel, pknature, pkdate)
+pk:returnPokemon(player, slot)
+GoPokemon(player, slot)
 player:sendTextMessage(MESSAGE_STATUS_SMALL,player:getName() .. " Congratulations, you managed to evolve your " .. pokeball .. " for " .. pokemons_evolution.evolution .. ".")
 end
 
