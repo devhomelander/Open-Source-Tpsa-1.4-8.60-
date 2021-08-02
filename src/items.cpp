@@ -1354,6 +1354,26 @@ void Items::parseItemNode(const pugi::xml_node& itemNode, uint16_t id)
 					break;
 				}
 
+				case ITEM_PARSE_TRANSFORMGO: {
+					it.transformgo = pugi::cast<uint16_t>(valueAttribute.value());
+					break;
+				}
+
+				case ITEM_PARSE_EFFECTGO: {
+					it.effectgo = pugi::cast<uint16_t>(valueAttribute.value());
+					break;
+				}
+
+				case ITEM_PARSE_MISILEGO: {
+					it.misilego = pugi::cast<uint16_t>(valueAttribute.value());
+					break;
+				}
+
+				case ITEM_PARSE_TRASFORMRETURN: {
+					it.transformreturn = pugi::cast<uint16_t>(valueAttribute.value());
+					break;
+				}
+
 				default: {
 					// It should not ever get to here, only if you add a new key to the map and don't configure a case for it.
 					std::cout << "[Warning - Items::parseItemNode] Not configured key value: " << keyAttribute.as_string() << std::endl;
@@ -1364,6 +1384,8 @@ void Items::parseItemNode(const pugi::xml_node& itemNode, uint16_t id)
 			std::cout << "[Warning - Items::parseItemNode] Unknown key value: " << keyAttribute.as_string() << std::endl;
 		}
 	}
+
+
 
 	//check bed items
 	if ((it.transformToFree != 0 || it.transformToOnUse[PLAYERSEX_FEMALE] != 0 || it.transformToOnUse[PLAYERSEX_MALE] != 0) && it.type != ITEM_TYPE_BED) {
