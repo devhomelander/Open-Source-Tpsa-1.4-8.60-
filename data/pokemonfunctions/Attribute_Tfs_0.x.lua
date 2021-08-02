@@ -107,7 +107,7 @@ function getItemAttribute(item, key)
 
 if(not(item))then
 
-return print(">> - doItemSetAttribute() " .. " : " .. "Item does not exist")
+return print(">> - getItemAttribute() " .. " : " .. "Item does not exist")
 
 end
 
@@ -115,7 +115,7 @@ local keyNames = KEYS[key]
 
 if(not(keyNames))then
 
-return print(">> - doItemSetAttribute() " .. " : " .. "That " .. key .. " does not exist")
+return print(">> - getItemAttribute() " .. " : " .. "That " .. key .. " does not exist")
 
 end
 
@@ -153,42 +153,42 @@ end
 
 function getName(item)
     if(not(item))then
-        return print(">> - doItemSetAttribute() " .. " : " .. "Item does not exist")
+        return print(">> - getItemAttribute() " .. " : " .. "Item does not exist")
     end
         return getItemAttribute(item, "name")
 end
 
 function getDescription(item)
     if(not(item))then
-        return print(">> - doItemSetAttribute() " .. " : " .. "Item does not exist")
+        return print(">> - getItemAttribute() " .. " : " .. "Item does not exist")
     end
         return getItemAttribute(item, "description")
 end
 
 function getPokeball(item)
 if(not(item))then
-    return print(">> - doItemSetAttribute() " .. " : " .. "Item does not exist")
+    return print(">> - getItemAttribute() " .. " : " .. "Item does not exist")
 end
     return getItemAttribute(item, "pokeball")
 end
 
 function getPokeGender(item)
     if(not(item))then
-        return print(">> - doItemSetAttribute() " .. " : " .. "Item does not exist")
+        return print(">> - getItemAttribute() " .. " : " .. "Item does not exist")
     end
         return getItemAttribute(item, "pokegender")
 end
 
 function getPokeNature(item)
     if(not(item))then
-        return print(">> - doItemSetAttribute() " .. " : " .. "Item does not exist")
+        return print(">> - getItemAttribute() " .. " : " .. "Item does not exist")
     end
         return getItemAttribute(item, "pokenature")
 end
 
 function getPokeLevel(item)
     if(not(item))then
-        return print(">> - doItemSetAttribute() " .. " : " .. "Item does not exist")
+        return print(">> - getItemAttribute() " .. " : " .. "Item does not exist")
     end
         return getItemAttribute(item, "pokelevel")
 end
