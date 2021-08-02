@@ -100,7 +100,7 @@ Pokemon:addonTransformOutfit(addon, pokeball)
 
 --Monster:levelSystem(player, level)
 
-item:adjustMove(pokeball) -- Pokemon spell adjuster
+--item:adjustMove(pokeball) -- Pokemon spell adjuster
 
 player:monsterInfo(Pokemon)
 

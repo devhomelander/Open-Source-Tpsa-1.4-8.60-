@@ -111,7 +111,7 @@ enum AttrTypes_t {
 	ATTR_POKELEVEL = 41,
 	ATTR_POKEBALLDATE = 42,
 	ATTR_POKEADDON = 43,
-	ATTR_POKEMOVE = 44,
+	ATTR_POKEBALLMOVE = 44,
 };
 
 enum Attr_ReadValue {
