@@ -80,7 +80,7 @@ end
 
 player:addSummon(Pokemon)
 
---Pokemon:levelSystem(player, level)
+--Pokemon:levelSystem(player, level) -- em breve
 
 local pokegender = item:getAttribute(ITEM_ATTRIBUTE_GENDER)
 
@@ -100,7 +100,7 @@ Pokemon:addonTransformOutfit(addon, pokeball)
 
 --Monster:levelSystem(player, level)
 
---item:adjustMove(pokeball)
+item:adjustMove(pokeball) -- Pokemon spell adjuster
 
 player:monsterInfo(Pokemon)
 
@@ -130,9 +130,7 @@ Pokemon:getPosition():sendMagicEffect(transforsms[1])
 
 item:transform(transformballs.transform)
 
---item:setAttribute(ITEM_ATTRIBUTE_POKEBALLMOVE, 1)
-
---print(item:getAttribute(ITEM_ATTRIBUTE_POKEBALLMOVE))
+item:setAttribute(ITEM_ATTRIBUTE_POKEBALLMOVE, 1) -- This attribute is configured in c++, to not let the pokeball move when a pokemon is out
 
 return true
 
@@ -152,7 +150,7 @@ Pokemon:getPosition():sendMagicEffect(balls[2])
 
 item:transform(balls[1], 1)
 
---item:setAttribute(ITEM_ATTRIBUTE_POKEBALLMOVE, 1)
+item:setAttribute(ITEM_ATTRIBUTE_POKEBALLMOVE, 1) -- This attribute is configured in c++, to not let the pokeball move when a pokemon is out
 
 return true
 
@@ -202,9 +200,7 @@ item:setAttribute(ITEM_ATTRIBUTE_POKELIFE, pokelife)
 
 local transss = item:getAttribute(ITEM_ATTRIBUTE_POKETRANSFORM)
 
---item:setAttribute(ITEM_ATTRIBUTE_UNIQUEID, 0)
-
---item:removeAttribute(ITEM_ATTRIBUTE_POKEBALLMOVE)
+item:removeAttribute(ITEM_ATTRIBUTE_POKEBALLMOVE)
 
 local transformsss = transform[transss]
 
