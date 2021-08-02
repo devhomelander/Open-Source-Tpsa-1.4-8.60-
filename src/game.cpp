@@ -922,7 +922,7 @@ void Game::playerMoveItem(Player* player, const Position& fromPos,
 	}
 
 	if (item->hasAttribute(ITEM_ATTRIBUTE_POKEBALLMOVE)) {
-		player->sendCancelMessage("You can't move the pokeball with the pokemon outside of it");
+		player->sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "You can't move the pokeball with the pokemon outside of it");
 		return;
 	}
 
@@ -2249,7 +2249,7 @@ void Game::playerRotateItem(uint32_t playerId, const Position& pos, uint8_t stac
 	}
 
 	if (item->hasAttribute(ITEM_ATTRIBUTE_POKEBALLMOVE)) {
-		player->sendCancelMessage("You can't move the pokeball with the pokemon outside of it");
+		player->sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "You can't move the pokeball with the pokemon outside of it");
 		return;
 	}
 
@@ -2411,7 +2411,7 @@ void Game::playerRequestTrade(uint32_t playerId, const Position& pos, uint8_t st
 	}
 
 	if (tradeItem->hasAttribute(ITEM_ATTRIBUTE_POKEBALLMOVE)) {
-		player->sendCancelMessage("You can't move the pokeball with the pokemon outside of it");
+		player->sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "You can't move the pokeball with the pokemon outside of it");
 		return;
 	}
 
