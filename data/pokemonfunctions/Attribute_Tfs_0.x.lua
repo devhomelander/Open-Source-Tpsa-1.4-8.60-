@@ -150,3 +150,46 @@ local Set_Key_Attribute = item:setAttribute(keyNames.nameAttribute, value)
 return Set_Key_Attribute
 
 end
+
+function getName(item)
+    if(not(item))then
+        return print(">> - doItemSetAttribute() " .. " : " .. "Item does not exist")
+    end
+        return getItemAttribute(item, "name")
+end
+
+function getDescription(item)
+    if(not(item))then
+        return print(">> - doItemSetAttribute() " .. " : " .. "Item does not exist")
+    end
+        return getItemAttribute(item, "description")
+end
+
+function getPokeball(item)
+if(not(item))then
+    return print(">> - doItemSetAttribute() " .. " : " .. "Item does not exist")
+end
+    return getItemAttribute(item, "pokeball")
+end
+
+function getPokeGender(item)
+    if(not(item))then
+        return print(">> - doItemSetAttribute() " .. " : " .. "Item does not exist")
+    end
+        return getItemAttribute(item, "pokegender")
+end
+
+function getPokeNature(item)
+    if(not(item))then
+        return print(">> - doItemSetAttribute() " .. " : " .. "Item does not exist")
+    end
+        return getItemAttribute(item, "pokenature")
+end
+
+function getPokeLevel(item)
+    if(not(item))then
+        return print(">> - doItemSetAttribute() " .. " : " .. "Item does not exist")
+    end
+        return getItemAttribute(item, "pokelevel")
+end
+
