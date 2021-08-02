@@ -2243,8 +2243,13 @@ void Game::playerRotateItem(uint32_t playerId, const Position& pos, uint8_t stac
 	}
 
 	Item* item = thing->getItem();
-	if (!item || item->getClientID() != spriteId || !item->isRotatable() || item->hasAttribute(ITEM_ATTRIBUTE_UNIQUEID) || item->hasAttribute(ITEM_ATTRIBUTE_POKEBALLMOVE)) {
+	if (!item || item->getClientID() != spriteId || !item->isRotatable() || item->hasAttribute(ITEM_ATTRIBUTE_UNIQUEID)) {
 		player->sendCancelMessage(RETURNVALUE_NOTPOSSIBLE);
+		return;
+	}
+
+	if (item->hasAttribute(ITEM_ATTRIBUTE_POKEBALLMOVE)) {
+		player->sendCancelMessage("You can't move the pokeball with the pokemon outside of it");
 		return;
 	}
 
@@ -2400,8 +2405,13 @@ void Game::playerRequestTrade(uint32_t playerId, const Position& pos, uint8_t st
 	}
 
 	Item* tradeItem = tradeThing->getItem();
-	if (tradeItem->getClientID() != spriteId || !tradeItem->isPickupable() || tradeItem->hasAttribute(ITEM_ATTRIBUTE_UNIQUEID) || tradeItem->hasAttribute(ITEM_ATTRIBUTE_POKEBALLMOVE)) {
+	if (tradeItem->getClientID() != spriteId || !tradeItem->isPickupable() || tradeItem->hasAttribute(ITEM_ATTRIBUTE_UNIQUEID)) {
 		player->sendCancelMessage(RETURNVALUE_NOTPOSSIBLE);
+		return;
+	}
+
+	if (tradeItem->hasAttribute(ITEM_ATTRIBUTE_POKEBALLMOVE)) {
+		player->sendCancelMessage("You can't move the pokeball with the pokemon outside of it");
 		return;
 	}
 
