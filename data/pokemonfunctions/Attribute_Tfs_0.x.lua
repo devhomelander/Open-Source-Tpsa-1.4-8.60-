@@ -93,7 +93,10 @@ KEYS = {
         nameAttribute = ITEM_ATTRIBUTE_POKELEVEL,
     },
     ["pokemoves"] = {
-        nameAttribute = ITEM_ATTRIBUTE_POKEMOVES,
+        nameAttribute = ITEM_ATTRIBUTE_POKEMOVECOMBAT,
+    },
+    ["pokeballmove"] = {
+        nameAttribute = ITEM_ATTRIBUTE_POKEBALLMOVE,
     },
     ["custom"] = {
         nameAttribute = ITEM_ATTRIBUTE_CUSTOM,
