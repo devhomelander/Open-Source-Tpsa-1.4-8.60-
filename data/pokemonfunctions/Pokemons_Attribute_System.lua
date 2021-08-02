@@ -123,5 +123,5 @@ function Item:adjustMove(pokeball_name)
         return
     end
 
-    return self:setAttribute(ITEM_ATTRIBUTE_POKEMOVECOMBAT, "TESTE")
+    return self:setAttribute(ITEM_ATTRIBUTE_POKEMOVECOMBAT, table_move_teste.spellName)
 end
