@@ -4,7 +4,7 @@
     =================
 ]]
 
-function onLookPokeball(player, item, pokeball, gender, level,  nature, pokedate)
+function Item:onLookPokeball(player, pokeball, gender, level,  nature, pokedate)
 local genders = GENDER_CONFIG[gender]
 if not genders then
 return
@@ -13,8 +13,8 @@ local natures = NATURE_CONFIG[nature]
 if not natures then
     return
 end
-item:setAttribute(ITEM_ATTRIBUTE_NAME, item:getName() .. " with one " .. pokeball)
-item:setAttribute(ITEM_ATTRIBUTE_DESCRIPTION, "level : " .. level .. "."..
+self:setAttribute(ITEM_ATTRIBUTE_NAME, self:getName() .. " with one " .. pokeball)
+self:setAttribute(ITEM_ATTRIBUTE_DESCRIPTION, "level : " .. level .. "."..
 "\n" .. "Gender : " .. genders.genderName .. "."..
 "\n" .. "Nature : " .. natures.natureName .. "." ..
 "\n" .. "Owner : " .. player:getName() .. "."..
@@ -109,7 +109,7 @@ local pknature = slot:getAttribute(ITEM_ATTRIBUTE_POKENATURE)
 local pkdate = slot:getAttribute(ITEM_ATTRIBUTE_POKEDATE)
 slot:removeAttribute(ITEM_ATTRIBUTE_NAME)
 local ball = Item(slot.uid)
-onLookPokeball(player, ball, evolution, pkgender, pklevel, pknature, pkdate)
+ball:onLookPokeball(player, evolution, pkgender, pklevel, pknature, pkdate)
 pk:returnPokemon(player, ball)
 GoPokemon(player, ball)
 player:sendTextMessage(MESSAGE_STATUS_SMALL,player:getName() .. " Congratulations, you managed to evolve your " .. pokeball .. " for " .. pokemons_evolution.evolution .. ".")

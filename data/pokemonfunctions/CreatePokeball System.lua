@@ -36,7 +36,7 @@ local level = item:getAttribute(ITEM_ATTRIBUTE_POKELEVEL)
 item:setAttribute(ITEM_ATTRIBUTE_POKEDATE, os.date("%d/%m/%Y"))
 local pokedate  = item:getAttribute(ITEM_ATTRIBUTE_POKEDATE)
 local ballName = item:getName()
-onLookPokeball(self, item, aa, bb, level, nature, pokedate)
+item:onLookPokeball(self, aa, bb, level, nature, pokedate)
 self:getPosition():sendMagicEffect(CONST_ME_MAGIC_RED)
 return true 
 end

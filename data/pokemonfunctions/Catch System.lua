@@ -22,7 +22,7 @@ local level = item:getAttribute(ITEM_ATTRIBUTE_POKELEVEL)
 local date = os.date("%d/%m/%Y")
 item:setAttribute(ITEM_ATTRIBUTE_POKEDATE, date)
 local pokedate  = item:getAttribute(ITEM_ATTRIBUTE_POKEDATE)
-onLookPokeball(player, item, aa, bb, level, nature, pokedate)
+item:onLookPokeball(player, aa, bb, level, nature, pokedate)
 player:sendTextMessage(MESSAGE_STATUS_SMALL, player:getName() .. " Congratulations you managed to capture " .. aa )
 item:moveDepot()
 end
