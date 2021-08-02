@@ -1464,6 +1464,7 @@ void LuaScriptInterface::registerFunctions()
 	registerEnum(ITEM_ATTRIBUTE_POKEDATE)
 	registerEnum(ITEM_ATTRIBUTE_POKEADDON)
 	registerEnum(ITEM_ATTRIBUTE_POKEMOVECOMBAT)
+	registerEnum(ITEM_ATTRIBUTE_POKEBALLMOVE)
 
 	registerEnum(ITEM_TYPE_DEPOT)
 	registerEnum(ITEM_TYPE_MAILBOX)
