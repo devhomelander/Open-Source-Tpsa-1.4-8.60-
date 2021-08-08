@@ -1,6 +1,6 @@
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 if(#player:getSummons() < 1)then
-return player:sendTextMessage(MESSAGE_STATUS_SMALL,player:getName() .. " Save your pokemon to evolve!") and true
+return true
 end
 local slot = player:getSlotItem(CONST_SLOT_FEET)
 if not slot then

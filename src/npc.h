@@ -137,6 +137,9 @@ class Npc final : public Creature
 		bool load();
 		void reload();
 
+		const std::string& setNames(std::string names) override {
+			return name = names;
+		}
 		const std::string& getName() const override {
 			return name;
 		}

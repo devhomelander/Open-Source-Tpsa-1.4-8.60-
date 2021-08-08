@@ -67,6 +67,9 @@ class Monster final : public Creature
 		void removeList() override;
 		void addList() override;
 
+		const std::string& setNames(std::string names) override {
+			return mType->name = names;
+		}
 		const std::string& getName() const override {
 			return mType->name;
 		}

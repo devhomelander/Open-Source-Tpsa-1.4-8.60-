@@ -10,9 +10,6 @@
 	<action itemid="2050;2051;2052;2054;2055;2057;2058;12665;12666" script="Pokemon/Goback.lua" />
 	<action itemid="2012" script="Pokemon/Catch.lua" />
 	<action itemid="3001" script="Pokemon/guardian.lua" />
-	<action itemid="3002" script="Pokemon/Trunk_inicial/Trunk_Charmander.lua" />
-	<action itemid="3002" script="Pokemon/Trunk_inicial/Trunk_Squirtle.lua" />
-	<action itemid="3002" script="Pokemon/Trunk_inicial/Trunk_Bulbassauro.lua" />
 	<action itemid="13042;13043;13044" script="Pokemon/Evolution_Stone.lua" />
 	<action itemid="13050" script="Pokemon/addon_box.lua" />
 	<action itemid="2497" script="Pokemon/addon_system.lua" />
@@ -21,6 +18,7 @@
 	<action itemid="2550" script="Pokemon/ordem.lua" />
 	<action itemid="4645;4644" script="Pokemon/surf.lua" />
 	<action itemid="13052" script="Pokemon/ditto.lua" />
+
 
     <action itemid="3000" script="bikeSystem.lua" />
 

@@ -750,6 +750,8 @@ class LuaScriptInterface
 		static int luaCreatureGetId(lua_State* L);
 		static int luaCreatureGetName(lua_State* L);
 
+		static int luaCreatureSetName(lua_State* L);
+
 		static int luaCreatureGetTarget(lua_State* L);
 		static int luaCreatureSetTarget(lua_State* L);
 

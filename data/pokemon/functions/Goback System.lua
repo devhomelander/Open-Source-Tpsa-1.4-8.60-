@@ -20,8 +20,6 @@ return player:sendTextMessage(MESSAGE_STATUS_SMALL, player:getName() .. " Place 
 
 end
 
-local ball = pokeoff[item.itemid]
-
 local pokeball = item:getAttribute(ITEM_ATTRIBUTE_POKEBALL)
 
 local transformballs = CONFIG_POKEMON[pokeball]
@@ -80,7 +78,7 @@ end
 
 player:addSummon(Pokemon)
 
---Pokemon:levelSystem(player, level) -- em breve
+player:levelSystem()
 
 local pokegender = item:getAttribute(ITEM_ATTRIBUTE_GENDER)
 
@@ -98,11 +96,13 @@ local addon = item:getAttribute(ITEM_ATTRIBUTE_POKEADDON)
 
 Pokemon:addonTransformOutfit(addon, pokeball)
 
---Monster:levelSystem(player, level)
+--[[player:adjustMove() -- Pokemon spell adjuster
 
---item:adjustMove(pokeball) -- Pokemon spell adjuster
+local teste_move = item:getAttribute(ITEM_ATTRIBUTE_POKECOMBATMOVE)
 
-player:monsterInfo(Pokemon)
+print(teste_move)]]
+
+player:monsterInfo()
 
 local message = {"Duel time, " .. pokeball .. "",
 
@@ -118,15 +118,13 @@ player:say(message[math.random(1 ,#message)], TALKTYPE_MONSTER_SAY)
 
 local trans = item:getAttribute(ITEM_ATTRIBUTE_POKETRANSFORM)
 
-local transforsms = transform[trans]
-
 local pk = Pokemon:getPosition()
 
-if (transforsms) then
+if (trans) then
 
-player:getPosition():sendDistanceEffect(pk, transforsms[2])
+player:getPosition():sendDistanceEffect(pk)
 
-Pokemon:getPosition():sendMagicEffect(transforsms[1])
+Pokemon:getPosition():sendMagicEffect(item[key"effectgo"])
 
 item:transform(transformballs.transform)
 
@@ -136,7 +134,7 @@ return true
 
 else
 
-player:getPosition():sendDistanceEffect(pk, item.misilego)
+player:getPosition():sendDistanceEffect(pk, item.itemmisilego)
 
 Pokemon:getPosition():sendMagicEffect(item.effectgo)
 
@@ -186,19 +184,15 @@ local b = {"Very good, ".. aa .. "",
 
 player:say(b[math.random(1, #b)], TALKTYPE_MONSTER_SAY)
 
-local pokelife = Pokemon:getHealth()
+local pokelife = self:getHealth()
 
 item:setAttribute(ITEM_ATTRIBUTE_POKELIFE, pokelife)
 
 local transss = item:getAttribute(ITEM_ATTRIBUTE_POKETRANSFORM)
 
-item:removeAttribute(ITEM_ATTRIBUTE_POKEBALLMOVE)
-
-local transformsss = transform[transss]
-
 local pk = player:getPosition()
 
-if (transformsss) then
+if (transss) then
 
 item:transform(transss)
 
@@ -207,6 +201,8 @@ self:getPosition():sendDistanceEffect(pk, transformsss[2])
 self:getPosition():sendMagicEffect(transformsss[1])
 
 self:remove()
+
+item:removeAttribute(ITEM_ATTRIBUTE_POKEBALLMOVE)
 
 return true
 
@@ -219,6 +215,8 @@ self:getPosition():sendDistanceEffect(pk, item.misilego)
 self:getPosition():sendMagicEffect(item.effectgo)
 
 self:remove()
+
+item:removeAttribute(ITEM_ATTRIBUTE_POKEBALLMOVE)
 
 return true
 

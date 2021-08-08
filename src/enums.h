@@ -56,7 +56,7 @@ enum ThreadState {
 	THREAD_STATE_TERMINATED,
 };
 
-enum itemAttrTypes : uint64_t {
+enum itemAttrTypes : uint32_t {
 	ITEM_ATTRIBUTE_NONE,
 
 	ITEM_ATTRIBUTE_ACTIONID = 1 << 0,

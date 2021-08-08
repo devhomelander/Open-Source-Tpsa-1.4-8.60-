@@ -151,6 +151,23 @@ return Set_Key_Attribute
 
 end
 
+function doItemEraseAttribute(item, key)
+if(not(item))then
+    return print(">> - doItemEraseAttribute() " .. " : " .. "Item does not exist")
+end
+
+local keyNames = KEYS[key]
+
+if(not(keyNames))then
+    return print(">> - doItemEraseAttribute() " .. " : " .. "That " .. key .. " does not exist")
+end
+
+local remove_Key = item:removeAttribute(keyNames.nameAttribute)
+
+return remove_Key
+
+end
+
 function getName(item)
     if(not(item))then
         return print(">> - getItemAttribute() " .. " : " .. "Item does not exist")

@@ -33,16 +33,19 @@ bool Map::loadMap(const std::string& identifier, bool loadHouses)
 	IOMap loader;
 	if (!loader.loadMap(this, identifier)) {
 		std::cout << "[Fatal - Map::loadMap] " << loader.getLastErrorString() << std::endl;
+		system("pause");
 		return false;
 	}
 
 	if (!IOMap::loadSpawns(this)) {
 		std::cout << "[Warning - Map::loadMap] Failed to load spawn data." << std::endl;
+		system("pause");
 	}
 
 	if (loadHouses) {
 		if (!IOMap::loadHouses(this)) {
 			std::cout << "[Warning - Map::loadMap] Failed to load house data." << std::endl;
+			system("pause");
 		}
 
 		IOMapSerialize::loadHouseInfo();

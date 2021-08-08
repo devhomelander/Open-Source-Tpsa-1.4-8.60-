@@ -25,6 +25,7 @@ function onLogin(player)
 	elseif not promotion then
 		player:setVocation(vocation:getDemotion())
 	end
+	
 
 	-- Events
 	player:registerEvent("PlayerDeath")

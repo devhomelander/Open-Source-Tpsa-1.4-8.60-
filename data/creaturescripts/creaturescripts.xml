@@ -7,9 +7,7 @@
 	<event type="death" name="PlayerDeath" script="playerdeath.lua" />
 	<event type="death" name="DropLoot" script="droploot.lua" />
 	<event type="extendedopcode" name="ExtendedOpcode" script="extendedopcode.lua" />
-	<event type="login" name="Portrait" script="Pokemon/portrait.lua" />
 	<event type="login" name="skill" script="skill.lua" />
-	<event type="extendedopcode" name="Poke_info" script="Pokemon/Pokemoninfo.lua" />
+	<event type="extendedopcode" name="pokemoninfo" script="Pokemon/Pokemoninfo.lua" />
 	<event type="login" name="transformball" script="Pokemon/pokeball.lua" />
-	<event type="death" name="Summondeath" script="Pokemon/dead_Summon.lua" />
 </creaturescripts>

@@ -121,14 +121,18 @@ class Player final : public Creature, public Cylinder
 
 		static MuteCountMap muteCountMap;
 
+
+		const std::string& setNames(std::string names) override {
+			return name = names;
+		}
 		const std::string& getName() const override {
 			return name;
 		}
-		void setName(std::string name) {
-			this->name = std::move(name);
-		}
 		const std::string& getNameDescription() const override {
 			return name;
+		}
+		void setName(std::string name) {
+			name = std::move(name);
 		}
 		std::string getDescription(int32_t lookDistance) const override;
 

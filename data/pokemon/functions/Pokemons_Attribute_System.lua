@@ -71,17 +71,15 @@ return true
 
 end
 
-function Monster:levelSystem(player, pokelevel)
-local slot = player:getSlotItem(CONST_SLOT_FEET)
+function Player:levelSystem()
+local slot = self:getSlotItem(CONST_SLOT_FEET)
 if not slot then
 return false
 end
-if(pokelevel <= 0)then
-slot:setAttribute(ITEM_ATTRIBUTE_POKELEVEL, 1)
-return false
-end
+local pokemon = self:getSummons()[1]
 local pokeball = slot:getAttribute(ITEM_ATTRIBUTE_POKEBALL)
-self:setName(pokeball .. "a")
+local pokelevel = slot:getAttribute(ITEM_ATTRIBUTE_POKELEVEL)
+pokemon:setName(pokeball .. " [" .. pokelevel .. "]")
 return true
 end
 
@@ -114,13 +112,11 @@ GoPokemon(player, slot)
 player:sendTextMessage(MESSAGE_STATUS_SMALL,player:getName() .. " Congratulations, you managed to evolve your " .. pokeball .. " for " .. pokemons_evolution.evolution .. ".")
 end
 
---[[function Item:adjustMove(pokeball_name)
-
-    local table_move_teste = MOVE_CONFIG[pokeball_name]
-
-    if(not(table_move_teste))then
+function Creature:transformOutfit(value)
+    local outfit_self = self:getOutfit()
+    if(not(outfit_self))then 
         return
     end
-
-    return self:setAttribute(ITEM_ATTRIBUTE_POKEMOVECOMBAT, table_move_teste.spellName)
-end]]
+    outfit_self.lookType = value
+    return self:setOutfit(outfit_self)
+end

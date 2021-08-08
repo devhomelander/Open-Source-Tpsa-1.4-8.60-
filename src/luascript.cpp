@@ -1463,7 +1463,6 @@ void LuaScriptInterface::registerFunctions()
 	registerEnum(ITEM_ATTRIBUTE_POKELEVEL)
 	registerEnum(ITEM_ATTRIBUTE_POKEDATE)
 	registerEnum(ITEM_ATTRIBUTE_POKEADDON)
-	registerEnum(ITEM_ATTRIBUTE_POKEMOVECOMBAT)
 	registerEnum(ITEM_ATTRIBUTE_POKEBALLMOVE)
 
 	registerEnum(ITEM_TYPE_DEPOT)
@@ -2185,6 +2184,8 @@ void LuaScriptInterface::registerFunctions()
 
 	registerMethod("Creature", "getId", LuaScriptInterface::luaCreatureGetId);
 	registerMethod("Creature", "getName", LuaScriptInterface::luaCreatureGetName);
+
+	registerMethod("Creature", "setName", LuaScriptInterface::luaCreatureSetName);
 
 	registerMethod("Creature", "getTarget", LuaScriptInterface::luaCreatureGetTarget);
 	registerMethod("Creature", "setTarget", LuaScriptInterface::luaCreatureSetTarget);
@@ -6911,6 +6912,19 @@ int LuaScriptInterface::luaCreatureGetName(lua_State* L)
 	if (creature) {
 		pushString(L, creature->getName());
 	} else {
+		lua_pushnil(L);
+	}
+	return 1;
+}
+
+int LuaScriptInterface::luaCreatureSetName(lua_State* L)
+{
+	// creature:SetName(name)
+	Creature* creature = getUserdata<Creature>(L, 1);
+	if (creature) {
+		creature->setNames(getString(L, 2));
+	}
+	else {
 		lua_pushnil(L);
 	}
 	return 1;

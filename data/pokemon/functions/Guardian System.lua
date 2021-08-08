@@ -27,9 +27,7 @@ item:setAttribute(ITEM_ATTRIBUTE_DESCRIPTION,"[Name] : " .. lenda.name ..
 "\n" .. "[Owner] : " .. player:getName() .. 
 "\n" .. "[Gender] : " .. genders.genderName .. 
 "\n" .. "[Last use] :" .. os.date() .. "")
-local guardians = MonsterType(lenda.name )
-guardians:nameDescription("(Guardian) " .. lenda.name  .. "")
-guardians:name("(Guardian) " .. lenda.name  .. "")
+monster:setName("(Guardian) " .. lenda.name  .. "")
 monster:setMaster(player)
 monster:setMaxHealth(70000000)
 monster:getPosition():sendMagicEffect(6)

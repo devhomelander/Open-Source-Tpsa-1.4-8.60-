@@ -281,12 +281,12 @@ class ItemAttributes
 			return static_cast<uint16_t>(getIntAttr(ITEM_ATTRIBUTE_POKEADDON));
 		}
 
-		void setPokeMoves(const std::string& _valueMoves) {
-			setStrAttr(ITEM_ATTRIBUTE_POKEMOVECOMBAT, _valueMoves);
+		/*void setPokeMoves(const std::string& _valueMoves) {
+			setStrAttr(ITEM_ATTRIBUTE_POKEMOVE, _valueMoves);
 		}
 		const std::string& getPokeMoves() const {
-			return getStrAttr(ITEM_ATTRIBUTE_POKEMOVECOMBAT);
-		}
+			return getStrAttr(ITEM_ATTRIBUTE_POKEMOVE);
+		}*/
 		void setPokeballMove(uint8_t moveball) {
 			setIntAttr(ITEM_ATTRIBUTE_POKEBALLMOVE, moveball);
 		}
@@ -584,8 +584,8 @@ class ItemAttributes
 			| ITEM_ATTRIBUTE_POKETRANSFORM | ITEM_ATTRIBUTE_POKELIFE | ITEM_ATTRIBUTE_POKENATURE | ITEM_ATTRIBUTE_POKELEVEL
 			| ITEM_ATTRIBUTE_POKEADDON | ITEM_ATTRIBUTE_POKEBALLMOVE;
 		const static uint64_t stringAttributeTypes = ITEM_ATTRIBUTE_DESCRIPTION | ITEM_ATTRIBUTE_TEXT | ITEM_ATTRIBUTE_WRITER
-			| ITEM_ATTRIBUTE_NAME | ITEM_ATTRIBUTE_ARTICLE | ITEM_ATTRIBUTE_PLURALNAME | ITEM_ATTRIBUTE_POKEBALL | ITEM_ATTRIBUTE_POKEDATE
-			| ITEM_ATTRIBUTE_POKEMOVECOMBAT;
+			| ITEM_ATTRIBUTE_NAME | ITEM_ATTRIBUTE_ARTICLE | ITEM_ATTRIBUTE_PLURALNAME | ITEM_ATTRIBUTE_POKEBALL
+			| ITEM_ATTRIBUTE_POKEDATE;
 
 	public:
 		static bool isIntAttrType(itemAttrTypes type) {
@@ -890,12 +890,12 @@ class Item : virtual public Thing
 			return static_cast<uint16_t>(getIntAttr(ITEM_ATTRIBUTE_POKEADDON));
 		}
 
-		void setPokeMoves(const std::string& _valueMoves) {
-			setStrAttr(ITEM_ATTRIBUTE_POKEMOVECOMBAT, _valueMoves);
+		/*void setPokeMoves(const std::string& _valueMoves) {
+			setStrAttr(ITEM_ATTRIBUTE_POKEMOVE, _valueMoves);
 		}
 		const std::string& getPokeMoves() const {
-			return getStrAttr(ITEM_ATTRIBUTE_POKEMOVECOMBAT);
-		}
+			return getStrAttr(ITEM_ATTRIBUTE_POKEMOVE);
+		}*/
 		void setPokeballMove(uint8_t moveball) {
 			setIntAttr(ITEM_ATTRIBUTE_POKEBALLMOVE, moveball);
 		}
