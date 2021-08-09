@@ -108,6 +108,7 @@ bool Event::checkScript(const std::string& basePath, const std::string& scriptsN
 
 	if (scriptId != 0) {
 		std::cout << "[Failure - Event::checkScript] scriptid = " << scriptId << std::endl;
+		system("pause");
 		return false;
 	}
 
@@ -129,6 +130,7 @@ bool Event::loadScript(const std::string& scriptFile)
 {
 	if (!scriptInterface || scriptId != 0) {
 		std::cout << "Failure: [Event::loadScript] scriptInterface == nullptr. scriptid = " << scriptId << std::endl;
+		system("pause");
 		return false;
 	}
 

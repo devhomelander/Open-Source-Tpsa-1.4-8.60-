@@ -120,3 +120,18 @@ function Creature:transformOutfit(value)
     outfit_self.lookType = value
     return self:setOutfit(outfit_self)
 end
+
+function Monster:VirusTransformation()
+    local name = self:getName()
+    local table_c = CONFIG_VIRUS[name]
+    if(not(table_c))then
+        return
+    end
+    local outfit = self:getOutfit()
+    if(not(outfit))then
+        return
+    end
+    outfit.lookType = table_c.outfit
+    self:setOutfit(outfit)
+self:setName("(VIRUS) " .. self:getName())
+end
