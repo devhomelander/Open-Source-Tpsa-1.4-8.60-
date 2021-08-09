@@ -122,9 +122,11 @@ local pk = Pokemon:getPosition()
 
 if (trans) then
 
-player:getPosition():sendDistanceEffect(pk)
+    print(item._attr.attribute.value)
 
-Pokemon:getPosition():sendMagicEffect(item[key"effectgo"])
+player:getPosition():sendDistanceEffect(pk, item.value)
+
+Pokemon:getPosition():sendMagicEffect(item.value)
 
 item:transform(transformballs.transform)
 
@@ -134,9 +136,9 @@ return true
 
 else
 
-player:getPosition():sendDistanceEffect(pk, item.itemmisilego)
+player:getPosition():sendDistanceEffect(pk, item.value)
 
-Pokemon:getPosition():sendMagicEffect(item.effectgo)
+Pokemon:getPosition():sendMagicEffect(item.value)
 
 item:transform(item.transformgo)
 
@@ -196,9 +198,9 @@ if (transss) then
 
 item:transform(transss)
 
-self:getPosition():sendDistanceEffect(pk, transformsss[2])
+self:getPosition():sendDistanceEffect(pk, item.value)
 
-self:getPosition():sendMagicEffect(transformsss[1])
+self:getPosition():sendMagicEffect(item.value)
 
 self:remove()
 
@@ -210,9 +212,9 @@ else
 
 item:transform(item.transformreturn)
 
-self:getPosition():sendDistanceEffect(pk, item.misilego)
+self:getPosition():sendDistanceEffect(pk, item.value)
 
-self:getPosition():sendMagicEffect(item.effectgo)
+self:getPosition():sendMagicEffect(item.value)
 
 self:remove()
 
