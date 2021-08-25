@@ -6,7 +6,12 @@ local pokemon = player:getSummons()[1]
 if not (pokemon)then
     return print("b")
 end
-if(pokemon:getName() ~= "Ditto")then
+local slot = player:getSlotItem(CONST_SLOT_FEET)
+if(not(slot))then
+    return
+end
+local pokeball = slot:getAttribute(ITEM_ATTRIBUTE_POKEBALL)
+if(pokeball ~= "Ditto")then
     return print("c")
 end
 local tar = target:getOutfit()

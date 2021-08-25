@@ -239,6 +239,7 @@ bool Spawn::spawnMonster(uint32_t spawnId, MonsterType* mType, const Position& p
 	monster->setMasterPos(pos);
 	monster->setSkull(SKULL_WHITE);
 	monster->incrementReferenceCounter();
+	monster->setNames(monster->getName() + "[" + "1" + "]");
 
 	spawnedMap.insert(spawned_pair(spawnId, monster));
 	spawnMap[spawnId].lastSpawn = OTSYS_TIME();

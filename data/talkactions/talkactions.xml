@@ -36,9 +36,9 @@
 	<talkaction words="/cb" separator=" " script="Pokemon/createPokeball.lua" />
 	<talkaction words="!save" script="!save.lua" />
 	<talkaction words="!h" script="Pokemon/!Tp-Summon.lua" />
-	<talkaction words="run" script="speed( Player ).lua" />
+	<talkaction words="run" script="run auto.lua" />
 	<talkaction words="!ball" script="Pokemon/Look_Pokeball.lua" />
-	<talkaction words="!love;!fome;!:);!!;!...;!pikachu;!go;!:D;;!?;!lol;!:l;!pb;!:(" script="Pokemon/emotion.lua" />
+	<talkaction words="!love" script="Pokemon/!love.lua" />
 	<talkaction words="!summon" script="Pokemon/goback ( pokebar ).lua" />
 	<talkaction words="!summong" script="Pokemon/guardian(List).lua" />
 	<talkaction words="!heal" script="Pokemon/!heal.lua" />
@@ -48,7 +48,7 @@
 	<talkaction words="!removeaddon" script="Pokemon/removeAddon.lua" />
 	<talkaction words="!fly" script="Pokemon/fly.lua" />
 	<talkaction words="move1;move2;move3;move4;move5;move6;move7;move8;move9;move10" script="Pokemon/moves.lua" />
-
+    <talkaction words="/rn;/rp;/rm" separator=" " script="rename.lua" />
 	<!-- player talkactions -->
 	<talkaction words="!buypremium" script="buyprem.lua" />
 	<talkaction words="!buyhouse" script="buyhouse.lua" />

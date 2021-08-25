@@ -129,6 +129,8 @@ class Creature : virtual public Thing
 
 		virtual const std::string& setNames(std::string names) = 0;
 
+		//virtual const std::string& setNick(std::string nick) = 0;
+
 		virtual const std::string& getName() const = 0;
 
 		virtual const std::string& getNameDescription() const = 0;
@@ -515,8 +517,8 @@ class Creature : virtual public Thing
 		Position lastPosition;
 		LightInfo internalLight;
 
-		Direction direction = DIRECTION_SOUTH;
-		Skulls_t skull = SKULL_NONE;
+		Direction direction;
+		Skulls_t skull;
 
 		bool localMapCache[mapWalkHeight][mapWalkWidth] = {{ false }};
 		bool isInternalRemoved = false;

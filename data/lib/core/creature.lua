@@ -173,3 +173,9 @@ function Creature:canAccessPz()
 	end
 	return true
 end
+
+function Creature:setNick(name, player)
+    local networkMessage = NetworkMessage()
+	networkMessage:addString(name)
+	self:setName(name)
+end

@@ -2184,7 +2184,6 @@ void LuaScriptInterface::registerFunctions()
 
 	registerMethod("Creature", "getId", LuaScriptInterface::luaCreatureGetId);
 	registerMethod("Creature", "getName", LuaScriptInterface::luaCreatureGetName);
-
 	registerMethod("Creature", "setName", LuaScriptInterface::luaCreatureSetName);
 
 	registerMethod("Creature", "getTarget", LuaScriptInterface::luaCreatureGetTarget);
@@ -6919,7 +6918,7 @@ int LuaScriptInterface::luaCreatureGetName(lua_State* L)
 
 int LuaScriptInterface::luaCreatureSetName(lua_State* L)
 {
-	// creature:SetName(name)
+	// creature:setName(name) Function that changes the name of all creatures
 	Creature* creature = getUserdata<Creature>(L, 1);
 	if (creature) {
 		creature->setNames(getString(L, 2));

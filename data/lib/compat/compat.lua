@@ -1487,7 +1487,7 @@ function showpos(v)
 	return v > 0 and '+' or '-'
 end
 
-function doCreatureSetName(cid, name)
+function doCreatureSetNick(cid, name)
 	local creature = Creature(cid)
 
 	if(creature)then
@@ -1496,18 +1496,6 @@ function doCreatureSetName(cid, name)
 		return
 	end
 	return
-end
-
-function doCreatureSetNick(cid, nick)
-	local creature = Creature(cid)
-
-	if(creature)then
-		return creature:setNick(nick)
-	else
-     return
-	end
-
-return
 end
 
 -- this is a fix for lua52 or higher which has the function renamed to table.unpack, while luajit still uses unpack

@@ -30,13 +30,7 @@ return player:sendTextMessage(MESSAGE_STATUS_SMALL, player:getName() .. " Did yo
 
 end
 
-if (#player:getSummons() >= 1) or (player:getSummons() == 1)then
-
-if not Pokemon then
-
-return player:sendTextMessage(MESSAGE_STATUS_SMALL, player:getName() .. " Did you find a bug please let the staff know") and true
-
-end
+if (#player:getSummons() >= 1)then
 
 local poke = player:getSummons()[1]
 
@@ -68,39 +62,41 @@ end
 
 local pos = player:getPosition()
 
-Pokemon = Game.createMonster(pokeball, pos, true, false)
+local pokemon = Game.createMonster(pokeball, pos, true, false)
 
-if not Pokemon then
+if not pokemon then
 
 return player:sendTextMessage(MESSAGE_STATUS_SMALL, player:getName() .." Sorry you can't summon a " .. pokeball .. ", contact a member of staff!.") and true
 
 end
 
-player:addSummon(Pokemon)
+player:addSummon(pokemon)
 
-player:levelSystem()
+local poke = player:getSummons()[1]
+
+poke:level(player)
 
 local pokegender = item:getAttribute(ITEM_ATTRIBUTE_GENDER)
 
-Pokemon:gender(pokegender, player)
+pokemon:gender(pokegender, player)
 
 local pokenature = item:getAttribute(ITEM_ATTRIBUTE_POKENATURE)
 
-Pokemon:natureSystem(player, pokenature)
+pokemon:natureSystem(player, pokenature)
 
 local pklife = item:getAttribute(ITEM_ATTRIBUTE_POKELIFE)
 
-Pokemon:setHealth(pklife)
+pokemon:setHealth(pklife)
 
 local addon = item:getAttribute(ITEM_ATTRIBUTE_POKEADDON)
 
-Pokemon:addonTransformOutfit(addon, pokeball)
+pokemon:addonTransformOutfit(addon, pokeball)
 
---[[player:adjustMove() -- Pokemon spell adjuster
+item:ajustStatusMove() -- Pokemon spell adjuster
 
-local teste_move = item:getAttribute(ITEM_ATTRIBUTE_POKECOMBATMOVE)
+local teste_move = item:getAttribute(ITEM_ATTRIBUTE_POKEMOVECOMBAT)
 
-print(teste_move)]]
+print(teste_move)
 
 player:monsterInfo()
 
@@ -126,7 +122,7 @@ if (trans) then
 
 player:getPosition():sendDistanceEffect(pk, item.value)
 
-Pokemon:getPosition():sendMagicEffect(item.value)
+pokemon:getPosition():sendMagicEffect(item.value)
 
 item:transform(transformballs.transform)
 
@@ -138,7 +134,7 @@ else
 
 player:getPosition():sendDistanceEffect(pk, item.value)
 
-Pokemon:getPosition():sendMagicEffect(item.value)
+pokemon:getPosition():sendMagicEffect(item.value)
 
 item:transform(item.transformgo)
 
